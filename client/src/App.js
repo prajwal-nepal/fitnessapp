@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Workouts from "./pages/Workouts";
 import storage from 'redux-persist/lib/storage'; 
+import ExerciseSearch from "./pages/Tutorials.jsx";
+import BMRcalculator from "./pages/BMRCalculator.jsx";
 
 const Container = styled.div`
   width: 100%;
@@ -31,8 +33,12 @@ function App() {
             <Navbar currentUser={currentUser} />
             <Routes>
             <Route path="/" exact element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/workouts" exact element={<Workouts />} />
+              <Route path="/tutorials" exact element={<ExerciseSearch />} />
+              <Route path="/bmrcalculator" exact element={<BMRcalculator />} />
             </Routes>
+            
           </Container>
         ) : (
           <Container>

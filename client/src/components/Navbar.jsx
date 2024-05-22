@@ -105,6 +105,11 @@ const TextButton = styled.div`
   }
 `;
 
+const logoStyles = {
+  width: '100px',  
+  height: 'auto'   
+};
+
 const MobileMenu = styled.ul`
   display: flex;
   flex-direction: column;
@@ -137,24 +142,26 @@ const Navbar = ({ currentUser }) => {
           <MenuRounded sx={{ color: "inherit" }} />
         </Mobileicon>
         <NavLogo to="/">
-          <Logo src={LogoImg} />
-          Fittrack
+          <Logo src={LogoImg} style={logoStyles}/>
+          FlexFit
         </NavLogo>
 
         <MobileMenu isOpen={isOpen}>
           <Navlink to="/">Dashboard</Navlink>
           <Navlink to="/workouts">Workouts</Navlink>
           <Navlink to="/tutorials">Tutorials</Navlink>
-          <Navlink to="/blogs">Blogs</Navlink>
-          <Navlink to="/contact">Contact</Navlink>
+          <Navlink to="/bmralculator">BMR</Navlink>
+          
+          
         </MobileMenu>
 
         <NavItems>
           <Navlink to="/">Dashboard</Navlink>
           <Navlink to="/workouts">Workouts</Navlink>
           <Navlink to="/tutorials">Tutorials</Navlink>
-          <Navlink to="/blogs">Blogs</Navlink>
-          <Navlink to="/contact">Contact</Navlink>
+          <Navlink to="/bmrcalculator">BMR</Navlink>
+          
+          
         </NavItems>
 
         <UserContainer>
